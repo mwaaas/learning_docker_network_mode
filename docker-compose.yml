@@ -1,0 +1,8 @@
+version: "3.6"
+services:
+  nginx:
+    image: nginx
+  alpine:
+    image: alpine
+    command: sh -c "apk add curl && curl localhost"
+    network_mode: service:nginx
